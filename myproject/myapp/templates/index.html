@@ -1,0 +1,17 @@
+<!-- myapp/templates/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Привет</title>
+  </head>
+  <body>
+    <h1>Привет</h1>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Сгенерировать случайное число</button>
+    </form>
+    {% if random_number %}
+    <p>Случайное число: {{ random_number }}</p>
+    {% endif %}
+  </body>
+</html>
